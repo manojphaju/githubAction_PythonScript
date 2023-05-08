@@ -1,0 +1,19 @@
+name: Github Action Workflows Python Script
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+  
+  workflow_dispatch:
+
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v3
+    - name: Run Python Scripts
+      run: python .github/workflows/example.py
+      
