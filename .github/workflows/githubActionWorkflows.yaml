@@ -11,9 +11,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v3
-    - name: Run Python Scripts
-      run: python .github/workflows/example.py
-      
+  runPythonScript:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run Python Scripts
+        run: python .github/workflows/example.py
