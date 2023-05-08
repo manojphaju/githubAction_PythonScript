@@ -16,4 +16,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run Python Scripts
+        env:
+          MY_SECRET_TOKEN: MY_SECRET_TOKEN
         run: python .github/workflows/example.py
